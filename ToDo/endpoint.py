@@ -13,10 +13,12 @@ def get_places():
 
 @app.route('/places/eat')
 def get_bares():
-    response = {}
-    for key,value in places.items():
-        if value == 'bar':
-            response.append({key:value})
+    response = [{}]
+    for el in places:
+        for key,value in el.items():
+            if value == 'bar':
+                response.append(el)
+    response = list(filter(None,response))
     return jsonify(response)
 
 @app.route('/places', methods=['POST'])
