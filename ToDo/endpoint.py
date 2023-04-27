@@ -17,7 +17,8 @@ def get_bares():
     for key,value in places.item():
         if value == 'bar':
             response.append({key:value})
-    return response
+    return jsonify(response)
+
 @app.route('/places', methods=['POST'])
 def add_places():
     places.append(request.get_json())
