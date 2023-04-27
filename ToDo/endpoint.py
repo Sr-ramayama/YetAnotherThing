@@ -14,7 +14,7 @@ def get_places():
 @app.route('/places/eat')
 def get_bares():
     response = {}
-    for key,value in places.item():
+    for key,value in places.items():
         if value == 'bar':
             response.append({key:value})
     return jsonify(response)
