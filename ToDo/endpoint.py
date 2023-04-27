@@ -3,7 +3,7 @@ from flask import Flask, jsonify, request
 app = Flask(__name__)
 
 places = [
-    { 'Type': 'bar', 'location': 'Calle Cum', 'Style': 'Indian' }
+    { 'Type': 'bar', 'Location': 'Calle Cum', 'Style': 'Indian' }
 ]
 
 
