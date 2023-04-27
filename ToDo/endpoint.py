@@ -16,7 +16,7 @@ def get_bares():
     response = [{}]
     for el in places:
         for key,value in el.items():
-            if value == 'bar':
+            if value.lower() == 'bar':
                 response.append(el)
     response = list(filter(None,response))
     return jsonify(response)
